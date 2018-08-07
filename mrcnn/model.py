@@ -1252,7 +1252,7 @@ def load_image_gt(dataset, config, image_id, augment=False, augmentation=None,
 
         def hook(images, augmenter, parents, default):
             """Determines which augmenters to apply to masks."""
-           return augmenter.__class__.__name__ in MASK_AUGMENTERS
+            return augmenter.__class__.__name__ in MASK_AUGMENTERS
 
         # Store shapes before augmentation to compare
         image_shape = image.shape
